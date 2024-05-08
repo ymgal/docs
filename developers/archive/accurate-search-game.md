@@ -10,6 +10,8 @@
 
 > keyword 匹配根据 [Trigram](https://lhncbc.nlm.nih.gov/ii/tools/MTI/trigram.html) 算法实现
 
+<br>
+
 此接口并不能保证匹配精确性，只能说，它在满足以下条件时，是可靠的
 
 * 入参 keyword 是游戏的全名，如：月に寄りそう乙女の作法、近月少女的礼仪
