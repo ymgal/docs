@@ -20,7 +20,7 @@
 
 
 示例&说明
-```json
+```json lines
 {
   "success": true, // 本次调用是否成功
   "code": 0, // 详情见 —— 返回码
@@ -56,11 +56,7 @@ public class R<T> {
         this.msg = msg;
         this.data = data;
 
-        if (RCode.SUCCESS.valueIs(code)) {
-            this.success = true;
-        } else {
-            this.success = false;
-        }
+        this.success = RCode.SUCCESS.valueIs(code);
     }
 }
 ```
@@ -99,7 +95,7 @@ declare interface R<T = any> {
 
 请求的列表会作为数组保存在 result 字段中
 
-```json
+```json lines
 {
   "result": [], // 响应的列表
   "total": 0, // 可供查询的总数
