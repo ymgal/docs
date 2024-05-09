@@ -45,7 +45,7 @@
 <br>
 
 ## Response Body
-```jsons
+```json
 {
     "game": {},
     "cidMapping": {

@@ -1,4 +1,4 @@
-# 业务模型
+# 档案业务模型
 
 业务对象建模，在 Archive 模块中有 4 种平级的档案模型，他们互相之间通过某些形式约定了多对多的关系
 
@@ -221,9 +221,6 @@ export enum Gender {
 <br>
 <br>
 
-
----
-
 ## 内容字段建模
 
 
@@ -289,7 +286,7 @@ export enum Gender {
           "desc": ""
         }
       ],
-      "introduction": "主人公大藏游星，作为代表了日本财界的“华丽一族”的大藏家的末端，其出生就被寄予厚望。\n在优秀的亲人与家庭教师身边被严格培育的游星，虽然各方面都很优秀，但换句话说也不过是一只笼中鸟，过着与普通人的梦想与希望毫无关系的生活。\n就在这时，游星首次得到了一个脱离家族的监视、独自来到外面的世界的机会。\n他化身为毫无名气的庶民女子小仓朝日，隐藏自己的身份潜入了上流阶层的子女云集的服饰专修机构『菲利亚女子学院』。\n作为相关一环，游星（朝日）将以侍候学院第一的超级同级生、樱小路露娜的女仆身份，在她所住的『樱公馆』劳作。\n也因此，他还会在那里与跟露娜有关系的一众学院生同住。\n一位是来自瑞士的高傲留学生，尤希尔。\n一位是继承传统花道系谱的大和抚子，花之宫瑞穂。\n另外一位，则是在主人公少年时代喜欢上他的庶民派社长千金，柳之濑凑。\n再加上一众独具个性的大小姐，以及跟随她们的超个性的侍者，更让游星（朝日）的生活波澜万丈。\n最终，游星能否一直伪装着身份（主要是性别），平安度过公馆与学校的双重生活中呢？",
+      "introduction": "主人公大藏游星，作为代表了日本财界的“华丽一族”的大藏家的末端......",
       "state": "PUBLIC_PUBLISHED",
       "weights": 0,
       "mainImg": "http://store.dev-ymgal.com/archive/main/3d/3d99dc3f2888479f98eadb3501c50713.webp",
@@ -317,56 +314,6 @@ export enum Gender {
           "cid": 19366,
           "cvId": 10954,
           "characterPosition": 2
-        },
-        {
-          "cid": 19367,
-          "cvId": 10765,
-          "characterPosition": 2
-        },
-        {
-          "cid": 19368,
-          "cvId": 10055,
-          "characterPosition": 2
-        },
-        {
-          "cid": 19369,
-          "cvId": 10186,
-          "characterPosition": 2
-        },
-        {
-          "cid": 19370,
-          "cvId": 10086,
-          "characterPosition": 2
-        },
-        {
-          "cid": 19371,
-          "cvId": 10043,
-          "characterPosition": 2
-        },
-        {
-          "cid": 19372,
-          "cvId": 10197,
-          "characterPosition": 2
-        },
-        {
-          "cid": 19373,
-          "cvId": 10255,
-          "characterPosition": 2
-        },
-        {
-          "cid": 19374,
-          "cvId": 11331,
-          "characterPosition": 2
-        },
-        {
-          "cid": 19375,
-          "cvId": 11086,
-          "characterPosition": 2
-        },
-        {
-          "cid": 35140,
-          "cvId": 31487,
-          "characterPosition": 2
         }
       ],
       "releases": [
@@ -386,123 +333,6 @@ export enum Gender {
           "releaseDate": "2021-07-05",
           "releaseLanguage": "English",
           "restrictionLevel": "未分级"
-        },
-        {
-          "id": 110066,
-          "releaseName": "月に寄りそう乙女の作法 コンプリートボックス",
-          "relatedLink": "https://project-navel.com/tsuki_box/",
-          "platform": "Windows",
-          "releaseDate": "2021-05-27",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R18+"
-        },
-        {
-          "id": 110067,
-          "releaseName": "月に寄りそう乙女の作法 ～ひだまりの日々～ スマホ版",
-          "relatedLink": "http://moeapp.net/special/tsuriotsu.html",
-          "platform": "Android",
-          "releaseDate": "2018-11-16",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R16+"
-        },
-        {
-          "id": 110068,
-          "releaseName": "月に寄りそう乙女の作法 ～ひだまりの日々～",
-          "relatedLink": "http://moeapp.net/special/tsuriotsu.html",
-          "platform": "Apple iProduct",
-          "releaseDate": "2018-11-16",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R12+"
-        },
-        {
-          "id": 110069,
-          "releaseName": "月に寄りそう乙女の作法 ～ひだまりの日々～",
-          "relatedLink": "http://dramaticcreate.com/tsukiniyorisou",
-          "platform": "PlayStation 4",
-          "releaseDate": "2017-10-26",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R17+"
-        },
-        {
-          "id": 110070,
-          "releaseName": "月に寄りそう乙女の作法 -FullVoice Edition-",
-          "relatedLink": "http://project-navel.com/tsukiniyorisou/",
-          "platform": "Windows",
-          "releaseDate": "2016-09-30",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R18+"
-        },
-        {
-          "id": 110071,
-          "releaseName": "月に寄りそう乙女の作法 ～ひだまりの日々～",
-          "relatedLink": "http://dramaticcreate.com/tsukiniyorisou",
-          "platform": "PlayStation Vita",
-          "releaseDate": "2015-11-26",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R17+"
-        },
-        {
-          "id": 110072,
-          "releaseName": "近月少女的礼仪",
-          "relatedLink": "http://bbs.kid-game.cn/read.php?tid=57965",
-          "platform": "Windows",
-          "releaseDate": "2015-02-17",
-          "releaseLanguage": "Chinese",
-          "restrictionLevel": "R18+"
-        },
-        {
-          "id": 110073,
-          "releaseName": "月に寄りそう乙女の作法 アペンドディスク",
-          "relatedLink": "http://project-navel.com/tsukiniyorisou/",
-          "platform": "Windows",
-          "releaseDate": "2014-08-29",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R18+"
-        },
-        {
-          "id": 110074,
-          "releaseName": "月に寄りそう乙女の作法 アペンドディスク ダウンロード版",
-          "relatedLink": "http://project-navel.com/tsukiniyorisou/",
-          "platform": "Windows",
-          "releaseDate": "2014-08-29",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R18+"
-        },
-        {
-          "id": 110075,
-          "releaseName": "月に寄りそう乙女の作法 ダウンロード版",
-          "relatedLink": "http://project-navel.com/tsukiniyorisou/",
-          "platform": "Windows",
-          "releaseDate": "2014-06-26",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R18+"
-        },
-        {
-          "id": 110076,
-          "releaseName": "月に寄りそう乙女の作法 -Standard Edition-",
-          "relatedLink": "http://project-navel.com/tsukiniyorisou/",
-          "platform": "Windows",
-          "releaseDate": "2012-12-21",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R18+"
-        },
-        {
-          "id": 110077,
-          "releaseName": "月に寄りそう乙女の作法 -Limited Edition-",
-          "relatedLink": "http://project-navel.com/tsukiniyorisou/",
-          "platform": "Windows",
-          "releaseDate": "2012-10-26",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R18+"
-        },
-        {
-          "id": 110078,
-          "releaseName": "月に寄りそう乙女の作法 体験版",
-          "relatedLink": "http://project-navel.com/tsukiniyorisou/trial.html",
-          "platform": "Windows",
-          "releaseDate": "2012-10-05",
-          "releaseLanguage": "Japanese",
-          "restrictionLevel": "R18+"
         }
       ],
       "staff": [
@@ -519,146 +349,6 @@ export enum Gender {
           "empName": "西又 葵",
           "empDesc": "",
           "jobName": "原画"
-        },
-        {
-          "sid": 126378,
-          "pid": 11697,
-          "empName": "羽純 りお",
-          "empDesc": "",
-          "jobName": "原画"
-        },
-        {
-          "sid": 126379,
-          "pid": 26906,
-          "empName": "たけぽん",
-          "empDesc": "",
-          "jobName": "原画"
-        },
-        {
-          "sid": 126380,
-          "pid": 22261,
-          "empName": "真紀士",
-          "empDesc": "",
-          "jobName": "脚本"
-        },
-        {
-          "sid": 126381,
-          "pid": 10150,
-          "empName": "王 雀孫",
-          "empDesc": "Scripting",
-          "jobName": "其他"
-        },
-        {
-          "sid": 126382,
-          "pid": 11891,
-          "empName": "森林 彬",
-          "empDesc": "Scripting",
-          "jobName": "其他"
-        },
-        {
-          "sid": 126383,
-          "pid": 11892,
-          "empName": "東ノ助",
-          "empDesc": "Scripting",
-          "jobName": "其他"
-        },
-        {
-          "sid": 126384,
-          "pid": 22261,
-          "empName": "真紀士",
-          "empDesc": "Planning, draft",
-          "jobName": "其他"
-        },
-        {
-          "sid": 126385,
-          "pid": 22262,
-          "empName": "与呼太",
-          "empDesc": "Movie",
-          "jobName": "其他"
-        },
-        {
-          "sid": 126386,
-          "pid": 11083,
-          "empName": "鈴平 ひろ",
-          "empDesc": "Asahi, Luna, Yuusei, Risona and Aeon",
-          "jobName": "人物设计"
-        },
-        {
-          "sid": 126387,
-          "pid": 11236,
-          "empName": "西又 葵",
-          "empDesc": "Minato, Mizuho, Hokuto, Sasha and Momiji",
-          "jobName": "人物设计"
-        },
-        {
-          "sid": 126388,
-          "pid": 11697,
-          "empName": "羽純 りお",
-          "empDesc": "Yachiyo and Nanai",
-          "jobName": "人物设计"
-        },
-        {
-          "sid": 126389,
-          "pid": 26906,
-          "empName": "たけぽん",
-          "empDesc": "Jean-Pierre",
-          "jobName": "人物设计"
-        },
-        {
-          "sid": 126390,
-          "pid": 10018,
-          "empName": "橋本 みゆき",
-          "empDesc": "Insert song 'SHINY MOON'",
-          "jobName": "歌曲"
-        },
-        {
-          "sid": 126391,
-          "pid": 10460,
-          "empName": "佐咲 紗花",
-          "empDesc": "ED 'Yowamushi Baby ・Nakimushi Baby'",
-          "jobName": "歌曲"
-        },
-        {
-          "sid": 126392,
-          "pid": 11167,
-          "empName": "美郷 あき",
-          "empDesc": "OP 'DESIRE'",
-          "jobName": "歌曲"
-        },
-        {
-          "sid": 126393,
-          "pid": 11091,
-          "empName": "アッチョリケ",
-          "empDesc": "Songs",
-          "jobName": "音乐"
-        },
-        {
-          "sid": 126394,
-          "pid": 20546,
-          "empName": "None",
-          "empDesc": "BGM",
-          "jobName": "音乐"
-        },
-        {
-          "sid": 126395,
-          "pid": 10150,
-          "empName": "王 雀孫",
-          "empDesc": "Character settings and prologue only",
-          "jobName": "脚本"
-        },
-        {
-          "sid": 126396,
-          "pid": 11891,
-          "empName": "森林 彬",
-          "empDesc": "Minato and Mizuho routes",
-          "jobName": "脚本"
-        },
-        {
-          "sid": 126397,
-          "pid": 11892,
-          "empName": "東ノ助",
-          "empDesc": "Main; Luna and Ursule routes",
-          "jobName": "脚本"
         }
       ],
       "type": "GAME",
