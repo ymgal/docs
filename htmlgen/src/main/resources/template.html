@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>月幕Galgame - 开放API</title>
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="name" content="月幕Galgame，开发者文档">
+    <meta name="description" content="月幕Galgame，开发者文档">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta itemprop="title" name="title" content="月幕Galgame，开发者文档">
+    <meta itemprop="url" content="https://www.ymgal.games/developer">
+
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="月幕Galgame，开发者文档">
+    <meta property="og:url" content="https://www.ymgal.games/developer">
+    <meta property="og:site_name" content="月幕Galgame">
+    <link rel="Canonical" href="https://www.ymgal.games/developer">
+
+    <style>
+        :root {
+            --font-family-mono: -apple-system, ui-monospace, "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+            --font-family-base: -apple-system, "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --color-base: #191e1e;
+        }
+
+        *, :after, :before {
+            box-sizing: inherit;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background-color: #fff;
+            text-rendering: optimizeLegibility;
+            word-wrap: anywhere;
+            color: var(--color-base);
+            line-height: 1.15;
+            margin: 0;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        div {
+            display: block;
+            unicode-bidi: isolate;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: rgba(60, 60, 67);
+            font-weight: 600;
+            -webkit-hyphens: none;
+            hyphens: none;
+            line-height: 1.3;
+            margin: 1rem 0 0;
+        }
+
+        /*h2 {
+            padding-bottom: .3em;
+            border-bottom: 1px solid #d8dee4;
+        }*/
+
+        p {
+            word-break: break-all;
+            line-height: 28px;
+            margin: 16px 0;
+        }
+
+        a {
+            text-decoration: underline;
+            text-underline-offset: .2rem;
+            color: #0969da;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #9ca2a8, rgba(0, 0, 0, 0));
+            margin: 4rem 0;
+        }
+
+        blockquote {
+            margin: 0 0 16px;
+            padding: 0 1em;
+            color: #636c76;
+            border-left: .25em solid #d0d7de;
+        }
+
+        table {
+            width: 100%;
+            background: #fff;
+            margin: 1em 0;
+            border: 1px solid rgba(34, 36, 38, .15);
+            box-shadow: none;
+            border-radius: .28571429rem;
+            text-align: left;
+            color: rgba(0, 0, 0, .87);
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        table thead {
+            display: table-header-group;
+            vertical-align: middle;
+            unicode-bidi: isolate;
+            border-color: inherit;
+        }
+
+        table tr {
+            display: table-row;
+            vertical-align: inherit;
+            unicode-bidi: isolate;
+            border-color: inherit;
+        }
+
+        table thead th {
+            cursor: auto;
+            background: #f9fafb;
+            text-align: inherit;
+            color: rgba(0, 0, 0, .87);
+            padding: .92857143em .78571429em;
+            vertical-align: inherit;
+            font-weight: 700;
+            text-transform: none;
+            border-bottom: 1px solid rgba(34, 36, 38, .1);
+            border-left: 1px solid rgba(34, 36, 38, .1);
+        }
+
+        table tr td {
+            border-left: 1px solid rgba(34, 36, 38, .1);
+            border-top: 1px solid rgba(34, 36, 38, .1);
+            padding: .78571429em .78571429em;
+            text-align: inherit;
+        }
+
+        main > pre {
+            font-size: .875em;;
+            line-height: 1.7;
+            font-family: var(--font-family-mono);
+            color-scheme: light;
+            background-color: #f6f8fa;
+            color: rgb(36, 41, 46);
+            border-radius: 8px;
+            margin: 16px 0;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / .1);
+            overflow-x: hidden;
+        }
+
+        p code, table code, ul code, ol code {
+            padding: .2em .4em;
+            margin: 0;
+            font-size: 85%;
+            white-space: break-spaces;
+            background-color: #afb8c133;
+            border-radius: 6px;
+            font-family: var(--font-family-base);
+        }
+
+        pre.shiki {
+            padding: 1rem .5rem;
+            margin: 0;
+            background-color: #f6f8fa !important;
+        }
+
+        pre code span {
+            font-family: var(--font-family-mono)
+        }
+
+        body * {
+            scrollbar-color: silver transparent;
+            scrollbar-width: thin;
+        }
+
+        ul, ol {
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+            unicode-bidi: isolate;
+        }
+
+        ul li, ol li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+            unicode-bidi: isolate;
+            line-height: 28px;
+        }
+
+        main ul, main ol {
+            margin-bottom: 16px;
+        }
+
+        main ul li, main ol li {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        div.body {
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .nav-container {
+            top: 0;
+            position: sticky;
+            visibility: visible;
+            min-width: 300px;
+            height: 100vh;
+            font-size: calc(16 / 18 * 1rem);
+            background: #fff;
+            border-right: 1px solid #e1e1e1;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: var(--color-base);
+            border-radius: 3px;
+            display: block;
+            padding: .4rem 28px .4rem .5rem;
+        }
+
+        .nav-container a:hover {
+            color: #06c;
+        }
+
+        .nav-container aside {
+            border: 0;
+            box-shadow: none;
+            max-width: 100%;
+            padding: 32px 32px 96px;
+            overscroll-behavior: contain;
+        }
+
+        .nav-container aside ul {
+            list-style: none;
+            margin: 0 0 0 .75rem;
+            padding: 0;
+        }
+
+        .nav-container aside li {
+            list-style: none;
+            position: relative;
+        }
+
+        .nav-container hr {
+            margin: 0.5rem 0;
+            border: 0;
+            padding-top: 1px;
+            background: repeating-linear-gradient(to right, #e1e1e1 0px, #e1e1e1 4px, transparent 0px, transparent 10px);
+        }
+
+        .main-container {
+            flex-grow: 1;
+            min-width: 0;
+            padding: 1rem 1rem 1rem 32px;
+            max-width: 1080px;
+        }
+
+        @media (max-width: 1400px) {
+            .main-container {
+                max-width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="body">
+    <div class="nav-container">
+        <aside>{{aside}}</aside>
+    </div>
+    <div class="main-container">
+        <header><h1 style="font-size: 2.5em; text-align: center;margin-bottom: 1.4em">YMGalgame API</h1></header>
+        <main>{{main}}</main>
+    </div>
+</div>
+
+<script type="module">
+    // be sure to specify the exact version
+    import {codeToHtml} from 'https://esm.run/shiki@1.1.6'
+
+    function htmlDecode(input) {
+        let e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+    async function renderUndefined() {
+        let codes = []
+
+        for (let pre of document.getElementsByTagName('pre')) {
+            let code = pre.children[0];
+            if (code.classList.length !== 0) continue
+
+            codes.push(code)
+        }
+
+        console.log(codes)
+
+        for (const code of codes) {
+            code.innerHTML = await codeToHtml(htmlDecode(code.innerHTML), {
+                lang: 'json',
+                theme: 'github-light'
+            })
+        }
+    }
+
+    async function render(lang) {
+        let codes = document.getElementsByClassName("language-" + lang);
+        for (let code of codes) {
+            code.innerHTML = await codeToHtml(htmlDecode(code.innerHTML), {
+                lang: lang,
+                theme: 'github-light'
+            })
+        }
+    }
+
+    window.addEventListener('load', () => Promise.all([renderUndefined()]).then(() => {
+        render('shell')
+        render('json')
+        render('java')
+        render('kotlin')
+        render('typescript')
+    }));
+</script>
+</body>
+</html>

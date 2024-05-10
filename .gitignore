@@ -40,3 +40,4 @@ gradle/
 HELP.md
 mvnw
 mvnw.cmd
+htmlgen/src/main/resources/developer.html
