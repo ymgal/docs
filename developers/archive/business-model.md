@@ -26,7 +26,7 @@ characters - CharacterRelation#cid -  Character
 characters - CharacterRelation#cvid - Person
 ```
 
-游戏之外的几种模型都比较简单，查看对应小节的字段解释与 Json 样例即可
+游戏之外的几种模型都比较简单，查看对应小节的字段解释与 JSON 样例即可
 
 <br>
 <br>
@@ -53,7 +53,7 @@ Game、Organization、Character、Person 均属于该模型的一种具体实现
 | publishTime        | datetime         |   ✅    | 发布时间   | 2023-08-07 00:01:50 | === string                               |
 | publisher          | int64            |   ✅    | 发布者   |                     |                                          |
 
-ExtensionName、MoreEntry 均属于单纯为了承载信息的内容字段，并不与任何档案之间具备任何关联关系，在本页最后面统一列出详细信息
+ExtensionName、MoreEntry 均属于单纯为了承载信息的内容字段，并不与任何档案之间具备任何关联关系，在本章节最后面统一列出详细信息
 
 <br>
 
@@ -75,7 +75,7 @@ ArchiveStateEnum 是一个枚举，标识了这个档案处于什么状态，不
 
 ## Game
 
-游戏档案，Json示例请查看最后一节
+游戏档案，JSON示例请查看最后一节
 
 | 字段名           | 类型                  |   nullable  | 说明        | 例子                           | 备注                           |
 |---------------|---------------------|-----|-----------| ------------------------------ |------------------------------|
@@ -91,7 +91,7 @@ ArchiveStateEnum 是一个枚举，标识了这个档案处于什么状态，不
 | website       | Website[]           |     | 相关网站      |                                | 官网、售卖网站等                     |
 | staff         | Staff[]             |     | 制作员工      |                                | 声优、画师、脚本等人力资源。               |
 
-Website 属于单纯为了承载信息的内容字段，在本页最后面统一列出详细信息
+Website 属于单纯为了承载信息的内容字段，在本章节最后面统一列出详细信息
 
 <br>
 
@@ -253,7 +253,7 @@ export enum Gender {
 
 ### Website
 
-和游戏相关的网站
+和档案相关的网站
 
 | 字段名 | 类型   | nullable | 说明    | 例子                  | 备注 |
 | ------ | ------ |----------| ------- | --------------------- | ---- |
@@ -266,7 +266,7 @@ export enum Gender {
 
 ---
 
-## Json Example (Game)
+## JSON Example (Game)
 
 ```json
 {

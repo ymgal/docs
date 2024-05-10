@@ -1,6 +1,6 @@
 # 获取 Access Token
 
-access_token 是月幕开放API的全局唯一接口调用凭据，调用各接口时都需使用access_token， 开发者需要进行妥善保存。
+access_token 是月幕开放API的全局唯一接口调用凭据，调用各接口时都需使用 access_token， 开发者需要进行妥善保存。
 
 access_token 的有效期为 1 个小时，通过相同的认证参数在有效期内重复获取时，将获得重复的 access_token。 access_token 有效期未受到完全的保障，所以请 **不要使用定时器** 实现更新逻辑，而是在 **拒绝策略** 中实现。
 

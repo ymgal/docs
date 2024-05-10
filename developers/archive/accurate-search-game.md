@@ -27,6 +27,8 @@
 
 `GET /open/archive/search-game`
 
+`version: 1`
+
 <br>
 
 ## Request Parameter
@@ -71,8 +73,17 @@
 
 **说明：**
 
-* game 字段数据和 [业务模型](business-model.md) 中定义的游戏业务模型一致，内部嵌套了 character、staff 等关联关系
+* game 字段数据和 [档案业务模型](business-model.md) 中定义的 Game 模型一致，内部嵌套了 character、staff 等关联关系
 * cidMapping 是一个映射表`(cid -> data)`，返回此游戏涉及到的所有 character 基础信息
 * pidMapping 是一个映射表`(pid -> data)`，返回此游戏涉及到的所有 person 基础信息
 
 <br>
+
+**找不到的 Response body（完整）**
+```json
+{
+  "success": false,
+  "code": 614,
+  "msg": "根据关键字找不到对应档案"
+}
+```
