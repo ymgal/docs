@@ -51,7 +51,7 @@
 
 此接口返回一个 Page，下方示例仅为 Page 中列表的单条数据
 
-字段说明请与档案API章节的档案模型对照，这里并没有需要额外注意的参数。
+字段说明请与档案API章节的档案模型对照，这里并没有需要额外注意的参数, 仅需注意返回值中每条数据的 id 等于 gid 即可。
 
 
 ```json
@@ -60,7 +60,7 @@
   "orgName": "",
   "releaseDate": "2024-05-10",
   "haveChinese": false,
-  "id": 0,
+  "id": 0, // gid
   "name": "",
   "chineseName": "",
   "state": "FREEZE",

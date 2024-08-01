@@ -77,19 +77,19 @@ ArchiveStateEnum 是一个枚举，标识了这个档案处于什么状态，不
 
 游戏档案，JSON示例请查看最后一节
 
-| 字段名           | 类型                  |   nullable  | 说明        | 例子                           | 备注                           |
-|---------------|---------------------|-----|-----------| ------------------------------ |------------------------------|
-| gid           | int64               |     | 游戏档案ID    |             31147                   |         https://www.ymgal.games/ga31147                     |
-| developerId   | int64               |     | 游戏品牌的机构ID |                                | 关联关系用, 等同于orgId              |
-| haveChinese   | boolean             |     | 有中文版      | true                           |                              |
-| typeDesc      | string              |     | 游戏类型描述    | バトルADV |                              |
-| releaseDate   | Date                |  ✅   | 发售日期      | 2020-01-01                     | string：yyyy-MM-dd， 指的是正式发售日期 |
-| restricted | boolean             |     | 限制级       | false                          | 带有露点、暴力等内容为true              |
-| country | string              |   ✅  | 国家        |                           |                              |
-| characters    | CharacterRelation[] |     | 出场人物      |                                | 主角配角们，关联的Charater            |
-| releases      | Release[]           |     | 发行版本      |                                | 该游戏发行过的版本                    |
-| website       | Website[]           |     | 相关网站      |                                | 官网、售卖网站等                     |
-| staff         | Staff[]             |     | 制作员工      |                                | 声优、画师、脚本等人力资源。               |
+| 字段名         | 类型                  |   nullable  | 说明        | 例子                           | 备注                           |
+|-------------|---------------------|-----|-----------| ------------------------------ |------------------------------|
+| gid         | int64               |     | 游戏档案ID |             31147                   |         https://www.ymgal.games/ga31147                     |
+| developerId | int64               |     | 游戏品牌的机构ID |                                | 关联关系用, 等同于orgId              |
+| haveChinese | boolean             |     | 有中文版      | true                           |                              |
+| typeDesc    | string              |     | 游戏类型描述    | バトルADV |                              |
+| releaseDate | Date                |  ✅   | 发售日期      | 2020-01-01                     | string：yyyy-MM-dd， 指的是正式发售日期 |
+| restricted  | boolean             |     | 限制级       | false                          | 带有露点、暴力等内容为true              |
+| country     | string              |   ✅  | 国家        |                           |                              |
+| characters  | CharacterRelation[] |     | 出场人物      |                                | 主角配角们，关联的Charater            |
+| releases    | Release[]           |     | 发行版本      |                                | 该游戏发行过的版本                    |
+| website     | Website[]           |     | 相关网站      |                                | 官网、售卖网站等                     |
+| staff       | Staff[]             |     | 制作员工      |                                | 声优、画师、脚本等人力资源。               |
 
 Website 属于单纯为了承载信息的内容字段，在本章节最后面统一列出详细信息
 
