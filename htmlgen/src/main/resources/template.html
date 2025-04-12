@@ -5,6 +5,8 @@
     <title>月幕Galgame - 开放API</title>
     <meta name="renderer" content="webkit">
     <meta name="force-rendering" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <meta name="name" content="月幕Galgame，开发者文档">
     <meta name="description" content="月幕Galgame，开发者文档">
 
@@ -266,11 +268,132 @@
             max-width: 1080px;
         }
 
+        /*菜单按钮默认隐藏*/
+        .menu-toggle {
+            display: none;
+        }
+
         @media (max-width: 1400px) {
             .main-container {
                 max-width: 800px;
             }
         }
+
+        @media (max-width: 1200px) {
+            * {
+                max-width: 100%;
+            }
+
+            /* 基础布局调整 */
+            body {
+                font-size: 14px; /* 稍微减小字体大小 */
+            }
+
+            .body {
+                flex-direction: column; /* 将左右布局改为上下布局 */
+            }
+
+            /* 导航菜单调整 */
+            .nav-container {
+                position: relative; /* 取消sticky定位 */
+                height: auto; /* 自动高度 */
+                min-width: unset; /* 移除最小宽度限制 */
+                max-height: 60vh; /* 限制最大高度，避免占满屏幕 */
+                width: 100%; /* 占满宽度 */
+                border-right: none; /* 移除右侧边框 */
+                border-bottom: 1px solid #e1e1e1; /* 添加底部边框 */
+            }
+
+            .nav-container aside {
+                padding: 16px; /* 减小内边距 */
+            }
+
+            /* 主内容区域调整 */
+            .main-container {
+                padding: 16px; /* 统一内边距 */
+                width: 100%; /* 占满宽度 */
+                max-width: 100%; /* 移除最大宽度限制 */
+                box-sizing: border-box;
+            }
+
+            header h1 {
+                font-size: 1.8em; /* 减小标题大小 */
+                margin-bottom: 1em; /* 减小底部外边距 */
+            }
+
+            /* 表格适配 */
+            table {
+                display: block;
+                overflow-x: auto; /* 允许表格水平滚动 */
+            }
+
+            /* 代码块适配 */
+            main > pre {
+                max-width: 100%;
+                overflow-x: auto; /* 允许代码块水平滚动 */
+            }
+
+            /* 减小段落行高 */
+            p {
+                line-height: 24px;
+            }
+
+            /* 减小列表行高 */
+            ul li, ol li {
+                line-height: 24px;
+            }
+        }
+
+        /* 小屏幕手机适配 */
+        @media (max-width: 480px) {
+            body {
+                font-size: 13px;
+            }
+
+            .nav-container {
+                max-height: 50vh;
+            }
+
+            .nav-container aside {
+                padding: 12px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            /* 调整内容区块间距 */
+            h1, h2, h3, h4, h5, h6 {
+                margin-top: 0.75rem;
+            }
+
+            hr {
+                margin: 2rem 0;
+            }
+
+            blockquote {
+                padding: 0 0.5em;
+            }
+        }
+
+        /* 可折叠导航选项 - 需要添加一个按钮到DOM中才能完全实现 */
+        @media (max-width: 1200px) {
+            .nav-container.collapsed {
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            /* 菜单按钮样式 */
+            .menu-toggle {
+                display: block;
+                text-align: center;
+                padding: 10px;
+                background: #f6f8fa;
+                cursor: pointer;
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -333,6 +456,28 @@
         render('kotlin')
         render('typescript')
     }));
+</script>
+
+<script type="application/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        // 添加一个菜单按钮到导航容器之前
+        const navContainer = document.querySelector('.nav-container');
+        const menuToggle = document.createElement('div');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.textContent = '菜单 ▼';
+        navContainer.parentNode.insertBefore(menuToggle, navContainer);
+
+        // 添加点击事件
+        menuToggle.addEventListener('click', () => {
+            navContainer.classList.toggle('collapsed');
+            menuToggle.textContent = navContainer.classList.contains('collapsed') ? '菜单 ▼' : '菜单 ▲';
+        });
+
+        // 默认折叠
+        if (window.innerWidth <= 1200) {
+            navContainer.classList.add('collapsed');
+        }
+    })
 </script>
 </body>
 </html>
