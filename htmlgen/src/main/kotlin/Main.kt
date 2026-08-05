@@ -30,6 +30,7 @@ val MENU = arrayListOf<MenuNode>(
     markdownMenuNode("archive/find-org-game.md"),
     markdownMenuNode("archive/by-release-date.md"),
     markdownMenuNode("archive/random-game.md"),
+    markdownMenuNode("topic/list.md"),
     MenuNode(""),
     markdownMenuNode("change-list.md"),
 )
